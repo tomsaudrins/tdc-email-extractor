@@ -1,7 +1,6 @@
 import os
 from tkinter.filedialog import askdirectory
 from win32com import client
-import re
 
 
 class TDC:
@@ -24,7 +23,7 @@ class TDC:
 
     def extract_to_file(self, name="output.txt"):
         with open(name, "w") as out_file:
-            for entry in bot.extract():
+            for entry in self.extract():
                 out_file.write(entry)
 
     def extract_number(self, msg):
